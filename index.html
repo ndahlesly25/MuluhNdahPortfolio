@@ -6,22 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muluh Ndah Awa Lesly | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="navbar">
-  <div class="logo">
-    <img src="images/logo.png" alt="Logo" class="logo-img" />
-    &lt;Muluh Ndah/&gt;
+  <div class="navbar-inner">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" class="logo-img" />
+      &lt;Muluh Ndah/&gt;
+    </div>
+
+    <nav id="navLinks" class="hidden">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#faqs">FAQs</a>
+    </nav>
+
+    <a href="#contact" class="btn-talk">Let's Talk</a>
+
+    <button id="menuToggle" class="hamburger" aria-label="Toggle Menu">
+      ☰
+    </button>
   </div>
-  <nav id="navLinks" class="hidden">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#faqs">FAQs</a>
-  </nav>
-  <a href="#contact" class="btn-talk">Let's Talk</a>
-  <button id="menuToggle">☰</button>
 </header>
+
 
 
 <section class="hero">
@@ -70,17 +80,32 @@
 
 
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-  <div><img src="https://cdn.simpleicons.org/html5" alt="HTML5" /><p>HTML5 - Structure of the web</p></div>
-  <div><img src="https://cdn.simpleicons.org/css3" alt="CSS3" /><p>CSS3 - Styling and layout</p></div>
-  <div><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" /><p>JavaScript - Interactivity</p></div>
-  <div><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" /><p>Node.js - Backend development</p></div>
-  <div><img src="https://cdn.simpleicons.org/mysql" alt="MySQL" /><p>MySQL - Database management</p></div>
-</div>
+ <section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="./logos/html5.png" alt="HTML5 Logo" />
+      <p><strong>HTML5</strong> — Structure of the web</p>
+    </div>
+    <div class="skill-item">
+      <img src="./logos/css3.png" alt="CSS3 Logo" />
+      <p><strong>CSS3</strong> — Styling and layout</p>
+    </div>
+    <div class="skill-item">
+      <img src="./logos/javascript.png" alt="JavaScript Logo" />
+      <p><strong>JavaScript</strong> — Interactivity</p>
+    </div>
+    <div class="skill-item">
+      <img src="./logos/nodedotjs.png" alt="Node.js Logo" />
+      <p><strong>Node.js</strong> — Backend development</p>
+    </div>
+    <div class="skill-item">
+      <img src="./logos/mysql.png" alt="MySQL Logo" />
+      <p><strong>MySQL</strong> — Database management</p>
+    </div>
+  </div>
+</section>
 
-  </section>
 
   <section id="faqs" class="section">
     <h2>FAQs</h2>

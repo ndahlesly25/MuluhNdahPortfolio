@@ -8,40 +8,125 @@ body {
   padding-top: 60px; /* adjust height based on your navbar's height */
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* General paragraph styling */
+p {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* For light/dark sections, you can adjust color as needed */
+.section p {
+  color: #444;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+/* Optional: animate paragraph fade-in */
+p {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Entire bar spans 100 %, but content is centered and padded */
 .navbar {
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e0e8ea;
-  padding: 1rem;
-  color: rgb(0, 0, 0);
-  display: flex;
+  background: #e0e8ea;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000; /* ensures it stays on top */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional subtle shadow */
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+
+/* Inner container keeps content away from edges */
+.navbar-inner {
+  max-width: 1200px;        /* adjust to taste */
+  margin: 0 auto;
+  padding: 0 24px;          /* left/right padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  gap: 8px;
+  font-size: 1.25rem;
   font-weight: bold;
-  color: #fff;
+  color: #007BFF;
 }
 
 .logo-img {
-  width: 60px;
-  height: 60px;
-  margin-right: 8px;
+  width: 50px;
+  height: 50px;
+  
   border-radius: 50px;
+}
+
+/* Navigation links */
+#navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#navLinks a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#navLinks a:hover {
+  color: green; /* Bright hover color */
+}
+
+/* Optional: underline animation on hover */
+#navLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+#navLinks a:hover::after {
+  width: 100%;
 }
 
 
 .navbar a, .btn-talk {
-  color: black;
-  font: 1.5em sans-serif;
+  color: white;
+  font: 1em sans-serif;
   text-decoration: none;
   margin-left: 1rem;
 }
@@ -50,10 +135,38 @@ body {
   color: #007bff;
 }
 
-.btn-talk {
-  background-color: #3487d4;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+/* Position the hamburger nicely */
+  .hamburger {
+  display: none;
+  font-size: 1.6rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Hover effect */
+.hamburger:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+  .btn-talk {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
 }
 
 .btn-talk:hover {
@@ -137,6 +250,26 @@ body {
   color: #555;
 }
 
+/* Projects Section */
+#projects {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#projects h3 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
 
 .project-grid {
   display: flex;
@@ -166,8 +299,22 @@ body {
 
 .project-card img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
 .btn-view {
@@ -176,7 +323,7 @@ body {
   padding: 10px 15px;
   background-color: #007BFF;
   color: white;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
@@ -451,6 +598,7 @@ body {
   display: none;
 }
 
+  /* Responsive: Small Screens */
 @media (max-width: 768px) {
   #navLinks.hidden {
     display: none;
@@ -466,4 +614,21 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+
+   .btn-talk {
+    display: none; 
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #navLinks.show {
+    display: flex;
+  }
+
+
 }
+  
+
+

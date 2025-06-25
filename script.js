@@ -4,5 +4,7 @@ document.getElementById('menuToggle').addEventListener('click', () => {
   navLinks.classList.toggle('hidden');
 });
 
+
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
