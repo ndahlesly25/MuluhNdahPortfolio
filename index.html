@@ -165,12 +165,17 @@
     <div class="contact-form-box">
       <p><strong>Got something in mind? I’m here and listening!</strong></p>
       <p>Just say the  <strong>WHAT</strong>, <strong>WHEN</strong> and <strong>WHERE</strong>. I’ll figure out the <strong>HOW</strong>.</p>
-      <form id="contactForm" method="POST" action="/send-message">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send</button>
       </form>
+
     </div>
     <div class="contact-image">
       <img src="./images/Profile3.jpg" alt="Contact Image" />

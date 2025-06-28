@@ -544,6 +544,15 @@ p {
 }
 
 
+#formStatus {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
 
 .footer {
   background-color: #e0e8ea;
