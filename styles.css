@@ -572,9 +572,12 @@ p {
   color: #f1c40f;
 }
 
-.footer-name {
-  font-size: 1.2em;
-  margin-top: 8px;
+.logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
 }
 
 .footer-socials {
